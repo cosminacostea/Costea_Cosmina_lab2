@@ -6,7 +6,7 @@ using System.Windows.Threading;
 
 namespace Costea_Cosmina_lab2
 {
-    class DoughnutMachine
+    class DoughnutMachine : Component
     {
         private DoughnutType mFlavor;
         public delegate void DoughnutCompleteDelegate();
@@ -43,11 +43,6 @@ namespace Costea_Cosmina_lab2
         {
             this.doughnutTimer = new DispatcherTimer();
             this.doughnutTimer.Tick += new System.EventHandler(this.doughnutTimer_Tick);
-        }
-
-        private void DoughnutTimer_Tick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
         private void doughnutTimer_Tick(object sender, EventArgs e)
         {
